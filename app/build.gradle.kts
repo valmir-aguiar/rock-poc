@@ -1,8 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.facebook)
 }
-
+react {
+    autolinkLibrariesWithApp()
+}
 android {
     namespace = "com.valmiraguiar.portopoc"
     compileSdk = 35
@@ -82,5 +85,5 @@ dependencies {
 //    implementation("com.facebook.react:hermes-android:0.81.1")
 //    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar", "*.aar"))))
 
-    implementation("com.testrockappreact:testrockapp:0.0.1")
+    implementation("com.testrockappreact:testrockapp:0.0.1-local")
 }
